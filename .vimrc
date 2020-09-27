@@ -1,8 +1,118 @@
+"========================================  
+" File Name: .vimrc  
+" Author: Terry chan 
+" Description: Vim配置文档  
+" Date: 2020.9.27  
+"======================================== 
+
 set encoding=utf-8
 set termencoding=utf-8
 
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr
 set fileencoding=utf-8
+
+
+
+" 开启语法高亮  
+syntax enable  
+
+" 开启语法高亮
+syntax on  
+
+" 设置字体  
+set guifont=Monaco\ 12
+
+" 设置历史记录条数  
+"set history=200000
+
+" 检测文件类型  
+filetype on  
+
+" 针对不同的文件，采用不同的缩进方式  
+filetype indent on  
+
+" 允许插件  
+filetype plugin on  
+
+" 启动自动补全
+filetype plugin indent on
+
+" 文件修改之后自动读入
+set autoread
+
+set clipboard^=unnamed,unnamedplus
+
+
+" 启动后不显示提示
+"set shortmess=atI
+
+" 备份,到另一个位置. 防止误删, 目前是取消备份
+" set backup
+" set backupext=.bak
+" set backupdir=vimbk/
+
+" 设置取消备份，禁止临时文件生成  
+"set nobackup  
+"set noswapfile  
+
+" 设置在Vim中可以使用鼠标，防止终端无法拷贝  
+set mouse=a  
+
+" 设置代码匹配,包括括号匹配情况  
+set showmatch  
+
+" how many tenths of a second to blink when matching brackets
+" setmatchtime=2
+
+" 开启及时搜索(is)  
+set incsearch  
+
+" 设置搜索高亮(hlsearch)  
+set hls  
+
+" 设置搜索时忽略大小写  
+set ignorecase  
+
+" 当搜索的时候尝试smart  
+set smartcase  
+
+" 设置代码折叠
+"set foldenable
+" 折叠方法
+" manual 手工折叠
+" indent 缩进折叠
+" expr 表达式折叠
+" syntax 语法折叠
+" diff 对没有更改的文件折叠
+" marker 标记折叠
+"set foldmethod=indent
+"set foldlevel=99
+
+"设置f11为快速切换粘贴按键
+
+set pastetoggle=<F11>
+
+
+set helplang=cn 
+
+
+" 自动补全配置让Vim补全菜单行为跟IDE一致
+set completeopt=longest,menu
+ " 增强模式中的命令行自动完成操作
+ set wildmenu
+
+
+"回车即选中当前项
+"inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+
+
+
+
+
+
+
+
+
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -127,7 +237,7 @@ let g:NERDToggleCheckAllLines = 1
 "显示目录树
 Plugin 'preservim/nerdtree'
 
-autocmd vimenter * NERDTree  "自动开启Nerdtree
+"autocmd vimenter * NERDTree  "自动开启Nerdtree
 "let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 "开启/关闭nerdtree快捷键
 map <C-f> :NERDTreeToggle<CR>
@@ -141,7 +251,7 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 "let g:NERDTreeShowLineNumbers=1  " 是否显示行号
-let g:NERDTreeHidden=0     "不显示隐藏文件
+let g:NERDTreeHidden=1     "不显示隐藏文件
 "Making it prettier
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
