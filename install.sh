@@ -23,5 +23,8 @@ vim +PluginInstall +qall
 #安装单个插件
 # vim +'PluginInstall! vim-markdown' +qall
 
-print "可以修改以下文件进行自定义"
-print ~/.vimrc
+echo "可以修改以下文件进行自定义"
+echo ~/.vimrc
+# 跳转到帮助网页
+exo-open --launch WebBrowser https://www.terrychan.org/Terry_vim
+

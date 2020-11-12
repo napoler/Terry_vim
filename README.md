@@ -3,9 +3,12 @@
 将文件放在个人目录下,Vim执行
 ## 自动安装
 适用于Debian系列系统
+```
 curl -s https://gitee.com/terrychan/Terry_vim/raw/master/install.sh | sudo bash
+```
 
 ## 文档说明
+
 
 https://www.terrychan.org/Terry_vim/
 

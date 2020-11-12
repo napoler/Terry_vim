@@ -47,9 +47,9 @@ set clipboard^=unnamed,unnamedplus
 "set shortmess=atI
 
 " 备份,到另一个位置. 防止误删, 目前是取消备份
-" set backup
-" set backupext=.bak
-" set backupdir=vimbk/
+set backup
+set backupext=.bak
+set backupdir=~/.vim/vimbk/
 
 " 设置取消备份，禁止临时文件生成  
 "set nobackup  
@@ -104,13 +104,6 @@ set completeopt=longest,menu
 
 "回车即选中当前项
 "inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-
-
-
-
-
-
-
 
 
 
@@ -258,7 +251,8 @@ let NERDTreeDirArrows = 1
 
 
 " vim-markdown是一个让Markdown语法高亮且有相关配置的插件
-Pligin "https://github.com/tamlok/vim-markdown.git"
+" Plugin 'tamlok/vim-markdown'
+Plugin 'mzlogin/vim-markdown-toc'
 " previm是一个预览Markdown的插件，支持实时更新
 Plugin 'kannokanno/previm'
 " 如果同时安装了open-browser.vim这个插件，就不用再配置相关参数，直接在编辑Markdown文本时，使用:PrevimOpen就可以预览文本了，并且修改保存后可以实时更新预览。
